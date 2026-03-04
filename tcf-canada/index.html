@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - Prép TCF</title>
+    <title>Politique de Confidentialité - Préparation TCF Canada</title>
     <style>
-        /* --- Styles (CSS) Intégrés --- */
         :root {
-            --primary-color: #007AFF; /* Bleu style iOS */
-            --bg-color: #f5f5f7;
-            --text-color: #1d1d1f;
+            --primary-color: #007AFF; 
+            --bg-color: #f2f2f7; /* Gris typique iOS */
+            --text-color: #1c1c1e;
             --card-bg: #ffffff;
-            --secondary-text: #86868b;
+            --secondary-text: #8e8e93;
         }
 
         * {
@@ -21,7 +20,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -31,50 +30,61 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: var(--card-bg);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            margin-bottom: 2rem;
+            padding: 0 1rem;
         }
 
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
             letter-spacing: -0.02em;
         }
 
         .last-updated {
             color: var(--secondary-text);
-            font-size: 0.95rem;
-            margin-bottom: 2.5rem;
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
             color: var(--text-color);
-            margin-top: 2.5rem;
             margin-bottom: 1rem;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 0.5rem;
         }
 
         p {
-            margin-bottom: 1rem;
             font-size: 1.05rem;
-            color: #333336;
+            color: #3a3a3c;
+            margin-bottom: 1rem;
         }
 
         ul {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             padding-left: 1.5rem;
         }
 
         li {
-            margin-bottom: 0.5rem;
             font-size: 1.05rem;
-            color: #333336;
+            color: #3a3a3c;
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--text-color);
         }
 
         a {
@@ -87,24 +97,21 @@
             text-decoration: underline;
         }
 
-        .contact-box {
-            background-color: #f9f9fb;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 2.5rem;
-            border: 1px solid #eaeaea;
+        .contact-email {
+            display: inline-block;
+            background-color: rgba(0, 122, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
         }
 
-        .contact-box h2 {
-            border-bottom: none;
-            margin-top: 0;
-            padding-bottom: 0;
-        }
-
-        /* Responsive pour Mobile */
         @media (max-width: 600px) {
-            .container {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            .card {
                 padding: 1.5rem;
+                border-radius: 12px;
             }
             h1 {
                 font-size: 2rem;
@@ -114,43 +121,69 @@
 </head>
 <body>
     <div class="container">
-        <h1>Politique de Confidentialité</h1>
-        <div class="last-updated">Dernière mise à jour : 4 Mars 2026</div>
-
-        <p><strong>El Hassan Akachar</strong> (« nous », « notre » ou « nos ») a développé l'application <strong>Prép TCF</strong> en tant qu'application commerciale. Ce SERVICE est fourni par El Hassan Akachar et est destiné à être utilisé tel quel.</p>
         
-        <p>Cette page est utilisée pour informer les visiteurs de nos politiques concernant la collecte, l'utilisation et la divulgation des informations, personnelles ou non, pour les utilisateurs utilisant notre Service. Apple exige une politique de confidentialité claire, et la voici.</p>
-
-        <p>Si vous choisissez d'utiliser notre Service, vous acceptez la collecte et l'utilisation d'informations en relation avec cette politique. La philosophie de cette application respecte le paradigme *Privacy by Design* : <strong>ce qui se passe sur votre appareil reste sur votre appareil</strong>.</p>
-
-        <h2>1. Collecte et utilisation des informations</h2>
-        <p>Pour une meilleure expérience lors de l'utilisation de notre Service, nous ne recueillons <strong>aucune donnée personnelle requérant une identification</strong>. Il est important de noter que :</p>
-        <ul>
-            <li><strong>Données locales :</strong> La majorité de vos données (historique des tests, progression, scores) sont stockées <strong>exclusivement et localement sur votre téléphone</strong> de manière sécurisée. Nous n'y avons pas accès.</li>
-            <li><strong>Aucun compte requis :</strong> L'application ne requiert pas la création d'un compte utilisateur pour fonctionner, garantissant ainsi votre anonymat total pendant vos révisions.</li>
-        </ul>
-
-        <h2>2. Fonctionnalité "Time Capsule"</h2>
-        <p>L'application inclut une fonctionnalité exclusive de <strong>Time Capsule</strong> qui vous permet de sauvegarder et de comparer vos propres performances passées d'expression. Tout le contenu généré ou sauvegardé par cette fonctionnalité est protégé et enfermé localement. Aucune donnée d'entraînement à l'examen (audio ou écrite) n'est transmise, transférée, vendue ou hébergée sur des serveurs distants.</p>
-
-        <h2>3. Données de journal (Crash Logs)</h2>
-        <p>Veuillez noter que chaque fois que vous utilisez notre Service, en cas de dysfonctionnement de l'application (crash), nous pouvons recevoir des rapports analytiques standards fournis par l'infrastructure d'Apple. Ces données ne sont collectées que si vous avez autorisé Apple à partager des analyses avec les développeurs. Elles ne contiennent jamais d'informations qui vous identifient personnellement ; elles nous aident simplement à corriger les bugs de l'application.</p>
-
-        <h2>4. Sécurité</h2>
-        <p>Nous valorisons votre confiance en utilisant notre application pour réussir votre examen TCF. Étant donné que nous ne recueillons pas d'informations personnelles sur nos propres serveurs, les risques de fuites en ligne de notre part sont nuls.</p>
-
-        <h2>5. Confidentialité des enfants</h2>
-        <p>L'application Prép TCF est un outil éducatif qui ne cible personne de moins de 13 ans et ne collecte sciemment aucune information personnellement identifiable d'enfants sous cet âge.</p>
-
-        <h2>6. Modifications de cette politique de confidentialité</h2>
-        <p>Nous pouvons mettre à jour notre politique de confidentialité de temps à autre. Ainsi, il vous est conseillé de consulter la version la plus récente depuis l'application ou l'App Store périodiquement. Nous vous informerons de tout changement en publiant la nouvelle politique de confidentialité sur cette page.</p>
-
-        <div class="contact-box">
-            <h2>7. Nous contacter</h2>
-            <p>Si vous avez des questions ou des suggestions concernant l'application ou notre politique de confidentialité, n'hésitez pas à nous contacter à l'adresse suivante :</p>
-            <!-- IMPORTANT: REMPLACEZ L'ADRESSE EMAIL CI-DESSOUS -->
-            <p><strong>Email :</strong> <a href="mailto:votre.vrai.email.tcf@gmail.com">votre.vrai.email.tcf@gmail.com</a></p>
+        <div class="header">
+            <h1>Politique de confidentialité</h1>
+            <div class="last-updated">Dernière mise à jour : Février 2026</div>
         </div>
+
+        <div class="card">
+            <h2>1. Collecte de données</h2>
+            <p>L'application <strong>Préparation TCF Canada</strong> collecte un minimum de données pour fonctionner correctement :</p>
+            <ul>
+                <li><strong>Pseudo :</strong> Votre prénom ou pseudo, stocké localement.</li>
+                <li><strong>Progression et Objectifs :</strong> Vos scores, votre Objectif Quotidien (Daily Goal), et vos statistiques de l'outil Time Capsule.</li>
+                <li><strong>Historique de Tests :</strong> Vos résultats des Tests Complets et entraînements.</li>
+                <li><strong>Enregistrements Audio :</strong> Vos réponses orales (sauvegardées uniquement sur votre appareil).</li>
+            </ul>
+            <p>Toutes les données sont stockées localement. Aucune donnée n'est transmise d'office vers un serveur externe.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Utilisation des données</h2>
+            <p>Les données collectées sont utilisées exclusivement pour :</p>
+            <ul>
+                <li>Personnaliser votre entraînement avec le suivi de l'Objectif Quotidien.</li>
+                <li>Analyser vos statistiques avec l'outil Time Capsule.</li>
+                <li>Vous permettre de réécouter vos performances orales.</li>
+                <li>Générer des Tests Complets adaptés à votre historique.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Services tiers</h2>
+            <p>L'application utilise les services suivants :</p>
+            <ul>
+                <li><strong>Apple App Store :</strong> Pour la distribution et les achats intégrés.</li>
+                <li><strong>Synthèse vocale iOS :</strong> Pour la lecture audio des exercices de compréhension orale.</li>
+            </ul>
+            <p>Aucun service d'analyse tiers ou de publicité externe n'est intégré dans l'application.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Stockage et sécurité</h2>
+            <p>Toutes vos données sont stockées localement sur votre appareil iOS et protégées par les mécanismes de sécurité d'Apple. Aucune donnée n'est stockée sur des serveurs distants.</p>
+            <p>La suppression de l'application entraîne la suppression définitive de toutes les données associées.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Droits de l'utilisateur</h2>
+            <p>Vous avez le droit de :</p>
+            <ul>
+                <li>Modifier votre pseudo à tout moment dans les paramètres.</li>
+                <li>Supprimer toutes vos données en désinstallant l'application de votre appareil.</li>
+                <li>Nous contacter pour toute question relative à vos données.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. Contact</h2>
+            <p>Pour toute question concernant cette politique de confidentialité, veuillez nous contacter à l'adresse suivante :</p>
+            <div class="contact-email">
+                📧 <a href="mailto:elhassanakachar82@hotmail.com">elhassanakachar82@hotmail.com</a>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
