@@ -1,407 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - KKAnime</title>
 
-<title>KKAnime</title>
+  <style>
+    :root {
+      --bg: #070814;
+      --bg-soft: #101225;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #f7f7fb;
+      --muted: #a7abc3;
+      --accent: #ff4fd8;
+      --accent-2: #7c5cff;
+      --accent-3: #00e5ff;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
 
-<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-:root{
-  --bg:#070b14;
-  --card:#111827;
-  --purple:#8b5cf6;
-  --pink:#ec4899;
-  --blue:#38bdf8;
-  --text:#f8fafc;
-  --muted:#94a3b8;
-}
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 79, 216, 0.22), transparent 32%),
+        radial-gradient(circle at top right, rgba(0, 229, 255, 0.16), transparent 35%),
+        linear-gradient(180deg, #070814 0%, #0b0d1c 55%, #070814 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.7;
+      padding: 32px 18px;
+    }
 
-body{
-  min-height:100vh;
-  font-family:Inter,Arial,sans-serif;
-  background:
-  radial-gradient(circle at top left, rgba(139,92,246,.25), transparent 25%),
-  radial-gradient(circle at bottom right, rgba(236,72,153,.20), transparent 28%),
-  linear-gradient(135deg,#050816,#0c1222 45%,#070b14);
-  color:var(--text);
-  overflow-x:hidden;
-}
+    .page {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
 
-/* SIDEBAR */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      border-radius: 32px;
+      padding: 48px 34px;
+      margin-bottom: 28px;
+      background:
+        linear-gradient(135deg, rgba(255, 79, 216, 0.18), rgba(124, 92, 255, 0.12)),
+        rgba(255, 255, 255, 0.05);
+      box-shadow: 0 24px 80px var(--shadow);
+    }
 
-.sidebar{
-  position:fixed;
-  left:24px;
-  top:24px;
-  bottom:24px;
-  width:90px;
-  border-radius:32px;
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.08);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:22px 0;
-  z-index:10;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -90px;
+      top: -90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 229, 255, 0.38), transparent 68%);
+    }
 
-.logo-box{
-  width:58px;
-  height:58px;
-  border-radius:20px;
-  background:linear-gradient(135deg,var(--purple),var(--pink));
-  display:grid;
-  place-items:center;
-  font-size:1.4rem;
-  font-weight:900;
-  box-shadow:0 18px 45px rgba(139,92,246,.35);
-  margin-bottom:40px;
-}
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      margin-bottom: 18px;
+    }
 
-.nav{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  width:100%;
-  align-items:center;
-}
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+      margin-bottom: 14px;
+    }
 
-.nav-item{
-  width:58px;
-  height:58px;
-  border-radius:18px;
-  background:rgba(255,255,255,.04);
-  display:grid;
-  place-items:center;
-  font-size:1.2rem;
-  transition:.3s;
-  cursor:pointer;
-}
+    .hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
 
-.nav-item:hover{
-  transform:translateY(-3px);
-  background:linear-gradient(135deg,var(--purple),var(--pink));
-}
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
 
-/* MAIN */
+    .sidebar {
+      position: sticky;
+      top: 18px;
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.055);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 18px 50px var(--shadow);
+    }
 
-.main{
-  margin-left:140px;
-  padding:40px;
-  min-height:100vh;
-}
+    .sidebar-title {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:40px;
-}
+    .sidebar a {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      padding: 11px 12px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      transition: 0.25s ease;
+    }
 
-.search{
-  width:420px;
-  max-width:100%;
-  height:58px;
-  border-radius:18px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.06);
-  padding:0 22px;
-  color:white;
-  font-size:1rem;
-  outline:none;
-}
+    .sidebar a:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: var(--accent-3);
+      transform: translateX(4px);
+    }
 
-.profile{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
+    .content {
+      display: grid;
+      gap: 18px;
+    }
 
-.profile img{
-  width:52px;
-  height:52px;
-  border-radius:50%;
-  object-fit:cover;
-  border:2px solid rgba(255,255,255,.12);
-}
+    .section {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      border-radius: 26px;
+      padding: 28px;
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 18px 55px var(--shadow);
+    }
 
-/* HERO */
+    .section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 42%);
+      opacity: 0.6;
+    }
 
-.hero{
-  position:relative;
-  min-height:520px;
-  border-radius:42px;
-  overflow:hidden;
-  padding:60px;
-  display:flex;
-  align-items:flex-end;
-  background:
-  linear-gradient(to top, rgba(3,7,18,.95), rgba(3,7,18,.25)),
-  url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop') center/cover;
-  box-shadow:0 40px 100px rgba(0,0,0,.45);
-}
+    .section > * {
+      position: relative;
+      z-index: 1;
+    }
 
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-  radial-gradient(circle at top right, rgba(139,92,246,.35), transparent 25%),
-  radial-gradient(circle at bottom left, rgba(236,72,153,.25), transparent 28%);
-}
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:650px;
-}
+    p {
+      color: #d9dcf0;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
 
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 16px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(10px);
-  margin-bottom:24px;
-  font-size:.9rem;
-  font-weight:700;
-}
+    ul {
+      padding-left: 18px;
+      margin: 10px 0 12px;
+    }
 
-.badge span{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:var(--pink);
-}
+    li {
+      color: #d9dcf0;
+      margin-bottom: 8px;
+    }
 
-h1{
-  font-size:clamp(3.4rem,8vw,7rem);
-  line-height:.9;
-  letter-spacing:-.07em;
-  margin-bottom:24px;
-}
+    strong {
+      color: #ffffff;
+    }
 
-h1 strong{
-  background:linear-gradient(90deg,var(--purple),var(--pink),var(--blue));
-  -webkit-background-clip:text;
-  color:transparent;
-}
+    .highlight {
+      color: var(--accent-3);
+      font-weight: 800;
+    }
 
-.description{
-  font-size:1.08rem;
-  line-height:1.8;
-  color:var(--muted);
-  margin-bottom:32px;
-  max-width:560px;
-}
+    .contact-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(255, 79, 216, 0.16), rgba(0, 229, 255, 0.12));
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
 
-.buttons{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
+    .contact-box a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+    }
 
-.btn{
-  padding:16px 24px;
-  border-radius:18px;
-  border:none;
-  cursor:pointer;
-  font-weight:800;
-  font-size:.96rem;
-  transition:.3s;
-}
+    .contact-box a:hover {
+      color: var(--accent-3);
+    }
 
-.btn-primary{
-  background:linear-gradient(135deg,var(--purple),var(--pink));
-  color:white;
-  box-shadow:0 18px 45px rgba(139,92,246,.35);
-}
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 26px 10px 6px;
+      font-size: 0.92rem;
+    }
 
-.btn-secondary{
-  background:rgba(255,255,255,.08);
-  color:white;
-  border:1px solid rgba(255,255,255,.08);
-}
+    @media (max-width: 850px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
 
-.btn:hover{
-  transform:translateY(-3px);
-}
+      .sidebar {
+        position: relative;
+        top: 0;
+      }
+    }
 
-/* FLOATING CARD */
+    @media (max-width: 600px) {
+      body {
+        padding: 18px 12px;
+      }
 
-.floating{
-  position:absolute;
-  top:40px;
-  right:40px;
-  width:240px;
-  padding:22px;
-  border-radius:28px;
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.08);
-}
+      .hero {
+        padding: 34px 22px;
+        border-radius: 24px;
+      }
 
-.floating h3{
-  margin-bottom:14px;
-  font-size:1.1rem;
-}
+      .section {
+        padding: 22px;
+        border-radius: 22px;
+      }
 
-.floating p{
-  color:var(--muted);
-  line-height:1.6;
-  font-size:.95rem;
-}
-
-/* CONTACT */
-
-.contact{
-  margin-top:34px;
-  display:inline-flex;
-  flex-direction:column;
-  gap:6px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08);
-  padding:18px 20px;
-  border-radius:22px;
-}
-
-.contact small{
-  color:var(--muted);
-}
-
-.contact a{
-  color:var(--blue);
-  text-decoration:none;
-  font-weight:800;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-  .sidebar{
-    display:none;
-  }
-
-  .main{
-    margin-left:0;
-    padding:20px;
-  }
-
-  .hero{
-    padding:34px;
-    min-height:640px;
-    align-items:flex-end;
-  }
-
-  .floating{
-    position:relative;
-    top:auto;
-    right:auto;
-    margin-top:28px;
-    width:100%;
-  }
-
-  .topbar{
-    flex-direction:column;
-    gap:18px;
-    align-items:stretch;
-  }
-
-  .search{
-    width:100%;
-  }
-
-}
-
-</style>
+      .sidebar {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="page">
 
-<div class="sidebar">
-
-  <div class="logo-box">
-    KK
-  </div>
-
-  <div class="nav">
-    <div class="nav-item">🏠</div>
-    <div class="nav-item">🔥</div>
-    <div class="nav-item">🎬</div>
-    <div class="nav-item">⭐</div>
-    <div class="nav-item">⚙️</div>
-  </div>
-
-</div>
-
-<div class="main">
-
-  <div class="topbar">
-
-    <input class="search" type="text" placeholder="Search anime, movies, genres..." />
-
-    <div class="profile">
-      <span>KKAnime</span>
-      <img src="hd-logo.png" alt="Profile">
-    </div>
-
-  </div>
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="badge">
-        <span></span>
-        New Anime Experience
-      </div>
-
-      <h1>
-        Discover<br>
-        <strong>KKAnime</strong>
-      </h1>
-
-      <p class="description">
-        Explore trending anime, discover new worlds, and enjoy a premium cinematic interface designed for anime fans.
-      </p>
-
-      <div class="buttons">
-        <button class="btn btn-primary">Start Watching</button>
-        <button class="btn btn-secondary">Explore Library</button>
-      </div>
-
-      <div class="contact">
-        <small>Support & Questions</small>
-        <a href="mailto:support@kkanime.app">
-          support@kkanime.app
-        </a>
-      </div>
-
-    </div>
-
-    <div class="floating">
-      <h3>Trending Today</h3>
-
+    <header class="hero">
+      <div class="badge">✨ KKAnime Privacy Center</div>
+      <h1>Privacy Policy</h1>
       <p>
-        Watch popular anime, save favorites, and enjoy a redesigned modern experience with KKAnime.
+        This Privacy Policy explains how KKAnime handles your data, app preferences,
+        advertising, third-party services, and local storage.
       </p>
+      <p><strong>Last updated:</strong> April 2026</p>
+    </header>
+
+    <div class="layout">
+
+      <nav class="sidebar">
+        <div class="sidebar-title">Sections</div>
+        <a href="#data">Data Collection</a>
+        <a href="#use">Use of Data</a>
+        <a href="#third-party">Third-Party Services</a>
+        <a href="#ads">Advertising</a>
+        <a href="#storage">Storage & Security</a>
+        <a href="#rights">User Rights</a>
+        <a href="#copyright">Copyright Disclaimer</a>
+        <a href="#changes">Changes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <section class="content">
+
+        <div class="section" id="data">
+          <h2>1. Data Collection</h2>
+          <p>
+            The <strong>KKAnime</strong> application collects only the minimum data
+            necessary for proper functionality.
+          </p>
+          <ul>
+            <li><strong>Favorites / Watchlist:</strong> Anime and shows you save are stored locally on your device.</li>
+            <li><strong>App Preferences:</strong> Settings and preferences are stored locally to improve your experience.</li>
+            <li><strong>Quiz or Progress Data:</strong> If available, your progress is stored locally on your device.</li>
+          </ul>
+          <p>
+            KKAnime does not collect personal information such as your name, email address,
+            phone number, or account credentials.
+          </p>
+        </div>
+
+        <div class="section" id="use">
+          <h2>2. Use of Data</h2>
+          <p>The data stored by the application is used exclusively to:</p>
+          <ul>
+            <li>Provide a personalized anime and shows discovery experience.</li>
+            <li>Save your favorites and watchlist.</li>
+            <li>Maintain your app preferences.</li>
+            <li>Improve the user experience within the app.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="third-party">
+          <h2>3. Third-Party Services</h2>
+          <p>The application may use third-party services, including:</p>
+          <ul>
+            <li><strong>Apple App Store:</strong> For app distribution and updates.</li>
+            <li><strong>Third-party content APIs:</strong> To provide anime/show information, images, descriptions, and metadata.</li>
+            <li><strong>YouTube or external platforms:</strong> To display official trailers when available.</li>
+            <li><strong>Google AdMob:</strong> To display advertisements, if enabled in the app.</li>
+          </ul>
+          <p>
+            These third-party services may collect data according to their own privacy policies.
+          </p>
+        </div>
+
+        <div class="section" id="ads">
+          <h2>4. Advertising</h2>
+          <p>KKAnime may display advertisements using Google AdMob.</p>
+          <p>
+            AdMob may collect limited information such as device identifiers,
+            advertising identifiers, and interaction data to provide and improve ads.
+          </p>
+          <p>You can limit ad tracking from your device settings.</p>
+        </div>
+
+        <div class="section" id="storage">
+          <h2>5. Storage and Security</h2>
+          <p>
+            All user data such as favorites, watchlist, and preferences is stored locally on your device.
+          </p>
+          <p>KKAnime does not store personal data on external servers.</p>
+          <p>
+            Deleting the app will permanently remove all associated local data from your device.
+          </p>
+        </div>
+
+        <div class="section" id="rights">
+          <h2>6. User Rights</h2>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access and manage your saved data inside the app.</li>
+            <li>Delete your saved data by removing it from the app.</li>
+            <li>Delete all local data by uninstalling the application.</li>
+            <li>Contact us for any privacy-related questions.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="copyright">
+          <h2>7. Copyright and Content Disclaimer</h2>
+          <p>KKAnime is an anime and shows discovery application.</p>
+          <p>
+            The app does not host, stream, or distribute full copyrighted anime episodes,
+            movies, or shows.
+          </p>
+          <p>
+            All information, images, descriptions, ratings, and trailers are provided by
+            third-party sources and remain the property of their respective owners.
+          </p>
+          <p>
+            KKAnime is intended for informational and entertainment purposes only.
+          </p>
+        </div>
+
+        <div class="section" id="changes">
+          <h2>8. Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect changes in the
+            application, legal requirements, or third-party services.
+          </p>
+          <p>
+            Any updates will be posted on this page with a revised
+            <span class="highlight">Last updated</span> date.
+          </p>
+        </div>
+
+        <div class="section" id="contact">
+          <h2>9. Contact</h2>
+          <p>If you have any questions about this Privacy Policy, you can contact us at:</p>
+
+          <div class="contact-box">
+            📧
+            <a href="mailto:pamelabxt12616@icloud.com">
+              pamelabxt12616@icloud.com
+            </a>
+          </div>
+        </div>
+
+      </section>
     </div>
 
-  </section>
+    <footer class="footer">
+      © 2026 KKAnime. All rights reserved.
+    </footer>
 
-</div>
-
+  </main>
 </body>
 </html>
